@@ -1,12 +1,5 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCr9mKpbq-fcXAYMYZkni5BzpcrIwGA01g",
-    authDomain: "chat-b33ab.firebaseapp.com",
-    databaseURL: "https://chat-b33ab-default-rtdb.firebaseio.com",
-    projectId: "chat-b33ab",
-    storageBucket: "chat-b33ab.appspot.com",
-    messagingSenderId: "789744330651",
-    appId: "1:789744330651:web:7e021fa6ff1d76a5cba33e",
-    measurementId: "G-NCH2D1WBNC"
+    
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -17,9 +10,7 @@ const nomeSala = localStorage.getItem("nomeSala");
 inicializar();
 
 function inicializar() {
-    document.getElementById("nomeSala").textContent = '#' + nomeSala;
-
-    getData();
+    //aqui
 }
 
 function getData() {
@@ -67,17 +58,7 @@ function getData() {
 }
 
 function send() {
-    const txtMsg = document.getElementById("msg");
-    const msg = txtMsg.value;
-
-    if (msg.trim()) {
-        firebase.database().ref('/' + nomeSala).push({
-            nome: nomeUsuario,
-            mensagem: msg,
-            likes: 0
-        });
-        txtMsg.value = "";
-    }
+    //passo 2
 }
 
 function likeMsg(btnId) {
